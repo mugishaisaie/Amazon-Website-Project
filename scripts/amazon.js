@@ -75,10 +75,17 @@ button.addEventListener("click",()=>{
         productId: productId,
         quantity: 1
     })
+
     }
 
+    let cartQuantity=0;
     
-    console.log(cart)
+    cart.forEach((cartItem)=>{
+      cartQuantity +=cartItem.quantity;
+
+    })
+    
+    document.querySelector('.js-cart-quantity').innerHTML=cartQuantity;
     
 })
 })
